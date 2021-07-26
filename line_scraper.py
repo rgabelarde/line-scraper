@@ -214,7 +214,7 @@ if __name__ == '__main__':
             [posts_df,
              scrape_media_urls(v['mixed_media_url'], v['username'])])
     posts_df.drop_duplicates(keep="first", inplace=True)
-    posts_df.to_excel(r'line_user_media_output.xlsx', index=False)
+    # posts_df.to_excel(r'line_user_media_output.xlsx', index=False)
 
     # Scrape each mixed media info further (more info)
     media_info_df = pd.DataFrame(map(scrape_media, posts_df['post_url']))
